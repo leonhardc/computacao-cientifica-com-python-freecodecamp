@@ -92,7 +92,7 @@ class Category:
             
             Este método deve retornar True se a transferência acontecer e, 
             caso contrário, False.
-            
+
         """
 
         if not self.check_funds(value):
@@ -102,6 +102,19 @@ class Category:
         category.deposit(value, f"Transfer from {self.category_name}")
         return True
 
+    def __str__(self) -> str:
+        title = f"{self.category_name:*^30}\n"
+        content = f""
+        for item in self.ledger:
+            description = item['description'] if len(item['description']) < 23 else item['description'][:22]
+            curr_line = f"{description:23s}{float(item['amount']):>7.2f}\n"
+            content += curr_line
+        return title + content
 
-    def create_spend_chart(categories):
-        pass
+
+def create_spend_chart(categories):
+    """
+        Recebe uma lista de categorias como um argumento. 
+        Retorna uma string, que é um gráfico de barras.
+    """
+    pass
