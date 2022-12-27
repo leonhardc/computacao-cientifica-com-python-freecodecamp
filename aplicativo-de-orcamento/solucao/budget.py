@@ -26,7 +26,7 @@ class Category:
 
         funds = sum([item["amount"] for item in self.ledger])
 
-        if funds + ((-1)*value) <= 0:
+        if funds - value < 0:
             return False
         
         return True
@@ -105,11 +105,14 @@ class Category:
     def __str__(self) -> str:
         title = f"{self.category_name:*^30}\n"
         content = f""
+        sum = 0
         for item in self.ledger:
-            description = item['description'] if len(item['description']) < 23 else item['description'][:22]
+            sum += item['amount']
+            description = item['description'] if len(item['description']) < 23 else item['description'][:23]
             curr_line = f"{description:23s}{float(item['amount']):>7.2f}\n"
             content += curr_line
-        return title + content
+        total = f"Total: {sum:.2f}"
+        return title + content + total
 
 
 def create_spend_chart(categories):
