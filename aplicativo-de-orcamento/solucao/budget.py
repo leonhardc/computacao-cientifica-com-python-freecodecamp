@@ -120,4 +120,80 @@ def create_spend_chart(categories):
         Recebe uma lista de categorias como um argumento. 
         Retorna uma string, que é um gráfico de barras.
     """
-    pass
+    title = "Percentage spent by category\n"
+    category_names = [category.category_name for category in categories]
+    len_bigger = len(category_names[0])
+    line = " "*4 + "---"*len(category_names) + "-\n"
+    graph = ""
+    percents = []
+
+    # Calculo das porcentagens
+    total_spending = 0
+    spending_per_category = []
+    for category in categories:
+        spending = 0 # somatorio de gastos da categoria
+        for value in category.ledger:
+            if value['amount'] < 0: # é gasto?
+                spending += value['amount']
+        total_spending += spending
+        spending_per_category.append(spending)
+
+    for value in spending_per_category:
+        percent = value/total_spending
+        percents.append(percent*100)
+
+    # formatando o gráfico
+    for curr_percent in range(100, -10, -10):
+        label = f"{curr_percent:3d}|"
+        for percent in percents:
+            if percent >= curr_percent:
+                label += " o "
+            else:
+                label += " "*3
+        graph += label + "\n"
+
+    # Achar a categoria com maior tamanho
+    for category in category_names:
+        if len(category) > len_bigger:
+            len_bigger = len(category) 
+    # label-x, category names
+    label_x = ""
+    for i in range(len_bigger):
+        label = " "*4
+        for category in category_names:
+            try:
+                label += f" {category[i]} "
+            except IndexError:
+                label += " "*3 # três espaços
+        label_x += label + "\n" # atualiza o estado de
+
+    return title + graph + line + label_x
+
+if __name__ == "__main__":
+
+    food = Category("Food")
+    entertainment = Category("Entertainment")
+    business = Category("Business")
+
+    food.deposit(900, "deposit")
+    entertainment.deposit(900, "deposit")
+    business.deposit(900, "deposit")
+
+    food.withdraw(105.55)
+    entertainment.withdraw(33.40)
+    business.withdraw(10.99)
+
+    print(food)
+
+    print(
+        create_spend_chart(
+            [
+                business,
+                food,
+                entertainment,
+            ]
+        )
+    )
+    # expected = "Percentage spent by category\n100|          \n 90|          \n 80|          \n 70|    o     \n 60|    o     \n 50|    o     \n 40|    o     \n 30|    o     \n 20|    o  o  \n 10|    o  o  \n  0| o  o  o  \n    ----------\n     B  F  E  \n     u  o  n  \n     s  o  t  \n     i  d  e  \n     n     r  \n     e     t  \n     s     a  \n     s     i  \n           n  \n           m  \n           e  \n           n  \n           t  "
+
+    # print(expected)
