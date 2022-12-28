@@ -173,6 +173,7 @@ def create_spend_chart(categories):
 
     return title + graph + line + label_x
 
+# testes
 if __name__ == "__main__":
 
     food = Category("Food")
