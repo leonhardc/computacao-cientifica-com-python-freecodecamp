@@ -1,4 +1,4 @@
-# Computação Ciêntifica com Python
+# **Computação Ciêntifica com Python**
 
 Olá, tudo bem? Eu me chamo Leonardo e, neste respositório mostro um pouco dos resultados dos meus estudos em python. 
 
@@ -16,10 +16,17 @@ Pois bem, vamos lá:
 * [Calculadora da Area de um Poligono](./calculadora-da-area-de-um-poligono/)
 * [Calculadora de Probabilidade](./calculadora-de-probabilidade/)
 
-### Dependencias
+### **Dependencias**
 
 Todos os projetos listados acima foram executados usando modulos padrão contidos no python 3.x. Fora as bibliotecas padrão, o pytest foi o  unico modulo que foi instalado em um ambiente virtual para rodas os testes de sofware. Para instalá-lo no seu ambiente basta excutar o comando `pip install pytest` no seu terminal:
 
-### Observações
+### **Observações**
 
 As soluções dos projetos listados acima podem ser encontradas também no meu [perfil do replit](https://replit.com/@LeonardoRodri90)
+
+Dentro de cada diretório deste repositório ha um subdiretório chamado 'solucao/' contendo quatro arquivos:
+
+* **README.md**: Contem uma explicação detalhada de cada trecho mais importante da solução
+* **main.py**: Arquivo onde será executado a implementação da solução do problema proposto e testes da solução
+* **test_module.py**: Onde estão listados todos os testes propostos para solução de cada problema
+* Um outro arquivo, nomeado devidamente para cada projeto, que contem de fato a solução do problema proposto
