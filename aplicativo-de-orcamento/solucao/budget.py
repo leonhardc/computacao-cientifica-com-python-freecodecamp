@@ -150,7 +150,7 @@ def create_spend_chart(categories):
                 label += " o "
             else:
                 label += " "*3
-        graph += label + "\n"
+        graph += label + " \n"
 
     # Achar a categoria com maior tamanho
     for category in category_names:
@@ -165,7 +165,11 @@ def create_spend_chart(categories):
                 label += f" {category[i]} "
             except IndexError:
                 label += " "*3 # três espaços
-        label_x += label + "\n" # atualiza o estado de
+        # atualiza o estado de label_x
+        if i < len_bigger-1:
+            label_x += label + " \n"
+        else:
+            label_x += label + " "
 
     return title + graph + line + label_x
 
@@ -183,8 +187,6 @@ if __name__ == "__main__":
     entertainment.withdraw(33.40)
     business.withdraw(10.99)
 
-    print(food)
-
     print(
         create_spend_chart(
             [
@@ -194,6 +196,15 @@ if __name__ == "__main__":
             ]
         )
     )
-    # expected = "Percentage spent by category\n100|          \n 90|          \n 80|          \n 70|    o     \n 60|    o     \n 50|    o     \n 40|    o     \n 30|    o     \n 20|    o  o  \n 10|    o  o  \n  0| o  o  o  \n    ----------\n     B  F  E  \n     u  o  n  \n     s  o  t  \n     i  d  e  \n     n     r  \n     e     t  \n     s     a  \n     s     i  \n           n  \n           m  \n           e  \n           n  \n           t  "
-
-    # print(expected)
+    atual = create_spend_chart(
+                [
+                    business,
+                    food,
+                    entertainment,
+                ]
+            )
+    expected = "Percentage spent by category\n100|          \n 90|          \n 80|          \n 70|    o     \n 60|    o     \n 50|    o     \n 40|    o     \n 30|    o     \n 20|    o  o  \n 10|    o  o  \n  0| o  o  o  \n    ----------\n     B  F  E  \n     u  o  n  \n     s  o  t  \n     i  d  e  \n     n     r  \n     e     t  \n     s     a  \n     s     i  \n           n  \n           m  \n           e  \n           n  \n           t  "
+    print(expected)
+    print(len(atual))
+    print(len(expected))
+    print(len(expected) - len(atual))
