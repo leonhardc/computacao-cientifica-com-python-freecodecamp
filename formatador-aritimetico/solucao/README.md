@@ -4,7 +4,7 @@ Assim como fiz para descrever o passo a passo do [problema proposto](./../README
 
 No arquivo [arithmetic_arranger.py](./arithmetic_arranger.py) temos a codificação de fato da solução do problema proposto neste projeto. Em resumo, **arithmetic_arranger.py** contem um unico método com a assinatura mostrada abaixo:
 
-```python
+```python  
     
     def arithmetic_arranger(problems, resolve=False)
 
