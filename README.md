@@ -1,14 +1,13 @@
 # **Computação Ciêntifica com Python**
 
+## Sobre
+
 Olá, tudo bem? Eu me chamo Leonardo e, neste respositório mostro um pouco dos resultados dos meus estudos em python. 
 
-Os projetos desenvolvidos aqui são os  projetos finais para que se possa obter a certificação da plataforma FreeCodeCamp no curso de "Computação Cientifica com Python". 
+Os projetos desenvolvidos aqui são os  projetos finais para que se possa obter o certificado da plataforma FreeCodeCamp no curso de "Computação Cientifica com Python". 
 
-Neste repositório em específico, mostrarei pra vocês a minha solução de cada problema proposto na plataforma. Sendo assim, como estou sempre aberto a melhoras, espero que, quem acabe topando por esse repositório possa compartilhar um pouco do seu conhecimento comigo também. 
+Neste repositório mostrarei a solução de cada problema proposto neste curso. Logo abaixo estão listados os projetos desenvolvidos e o link para cada um.
 
-Logo abaixo dou uma leve introdução do que se trata cada projeto mas a solução e os detalhes sobre eles estão contidos no repositorio referente a cada um.
-
-Pois bem, vamos lá:
 
 * [Formatador Aritimético](./formatador-aritimetico/)
 * [Calculadora de tempo](./calculadora-de-tempo/)
@@ -18,7 +17,19 @@ Pois bem, vamos lá:
 
 ### **Dependencias**
 
-Todos os projetos listados acima foram executados usando modulos padrão contidos no python 3.x. Fora as bibliotecas padrão, o pytest foi o  unico modulo que foi instalado em um ambiente virtual para rodas os testes de sofware. Para instalá-lo no seu ambiente basta excutar o comando `pip install pytest` no seu terminal:
+Estes projetos foram desenvolvidos inteiramente em python 3.9.12, então ele é fundamental para executar cada projeto na sua máquina. Para instalá-lo basta clicar [aqui](https://www.python.org/downloads/), baixá-lo e instalar o python 3.9 ou superior. 
+
+Depois de instalado corretamente, precisamos configurar somente mais uma coisa. Temos que executar o comando abaixo para podermos usar nosso ambiente de testes. 
+
+` pip install pytest `
+
+Obs: Para não atrapalhar a execução de outros projetos desenvolvidos recomenda-se o uso de ambientes virtuais para execução desses projetos. 
+
+Ao entrar no diretório de cada um dos projetos você verá uma outra pasta chamada solucao/, esta contem toda a implementação e para executar o projeto, basta usar o comando abaixo:
+
+` python main.py `
+
+Todos os projetos contam com um arquivo principal chamado main.py, que é o arquivo que de fato será executado.
 
 ### **Observações**
 
