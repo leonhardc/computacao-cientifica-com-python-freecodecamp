@@ -6,7 +6,7 @@ No arquivo [arithmetic_arranger.py](./arithmetic_arranger.py) temos a codificaç
 
 ```python  
     
-    def arithmetic_arranger(problems, resolve=False)
+    arithmetic_arranger(problems, resolve=False)
 
 ```
 O método **arithmetic_arranger(...)** recebe dois parametros, o primeiro **problems** se trata de uma lista de problemas matemáticos, escritos de maneira linear, que devem ser posteriormente escritos numa forma mais amigavel aos olhos humanos, assim como é ensinado na escola.
