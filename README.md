@@ -2,7 +2,6 @@
 
 
 ## **Descrição**
---------------------------------------------------------------------------------------
 
 
 Olá, tudo bem? Eu me chamo Leonardo e, neste respositório mostro um pouco dos resultados dos meus estudos em python. 
@@ -11,7 +10,6 @@ Os projetos desenvolvidos aqui são os  projetos finais para que se possa obter 
 
 
 ## **Projetos Desenvolvidos**
---------------------------------------------------------------------------------------
 
 * [Formatador Aritimético](./formatador-aritimetico/)
 * [Calculadora de tempo](./calculadora-de-tempo/)
@@ -20,7 +18,6 @@ Os projetos desenvolvidos aqui são os  projetos finais para que se possa obter 
 * [Calculadora de Probabilidade](./calculadora-de-probabilidade/)
 
 ## **Dependencias**
---------------------------------------------------------------------------------------
 
 
 Estes projetos foram desenvolvidos inteiramente em python 3.9.12, então ele é fundamental para executar cada projeto na sua máquina. Para instalá-lo basta clicar [aqui](https://www.python.org/downloads/), baixá-lo e instalar o python 3.9 ou superior. 
@@ -32,7 +29,7 @@ Depois de instalado corretamente, precisamos configurar somente mais uma coisa. 
 Obs: Para não atrapalhar a execução de outros projetos desenvolvidos recomenda-se o uso de ambientes virtuais para execução desses projetos. 
 
 ## **Rodando o código**
---------------------------------------------------------------------------------------
+
 
 
 Ao entrar no diretório de cada um dos projetos você verá uma outra pasta chamada `solucao/`, ao entrar nesta pasta, voce encontratá quatro arquivos:
@@ -48,7 +45,7 @@ Para executar cada projeto basta rodar o comando abaixo no seu terminal
 
 
 ## **Observações**
---------------------------------------------------------------------------------------
+
 
 As soluções dos projetos listados acima podem ser encontradas também no meu [perfil do replit](https://replit.com/@LeonardoRodri90)
 
